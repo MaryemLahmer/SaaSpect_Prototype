@@ -11,6 +11,9 @@ export default {
 
   theme: {
     extend: {
+      backgroundImage: {
+        "custom-gradient": "linear-gradient(to top, #7028e4 0%, #e5b2ca 100%)",
+      },
       keyframes: {
         anim: {
           "0%": { transform: "translateY(0)" },
