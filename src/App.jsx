@@ -1,19 +1,20 @@
+import React, { useState } from "react";
 import Navbar from "./components/Navbar";
-import "./App.css";
 import Sidebar from "./components/Sidebar";
 import RemainingTokensCard from "./components/RemainingTokensCard";
 import MainContainer from "./components/MainContainer";
-const App = () => {
-  return (
-    <>
-      <div class="body">
-        <Sidebar />
+import "./App.css";
 
-        <RemainingTokensCard />
-        <MainContainer />
-      </div>
-    </>
-  );
+const App = () => {
+    const [tokens, setTokens] = useState(10); // Start with 10 tokens
+
+    return (
+        <div className="body">
+            <Sidebar />
+            <RemainingTokensCard tokens={tokens} /> {/* Display remaining tokens */}
+            <MainContainer tokens={tokens} setTokens={setTokens} /> {/* Pass tokens and setTokens */}
+        </div>
+    );
 };
 
 export default App;
