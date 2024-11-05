@@ -1,72 +1,20 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
+import InputFolder from "./InputFolder";
+import Hosted from "./Hosted";
 
 const UserSubscription = () => {
-    return (
-        <StyledWrapper>
-            <section className="card">
-                <header>
-                    <p>
-                        Account <span className="active">active</span>
-                    </p>
-                </header>
-                <div className="premium-plan">
-                    <span>Premium Plan</span>
-                </div>
-                <main>
-                    <p>Web Scanner</p>
-                </main>
-            </section>
-        </StyledWrapper>
-    );
-}
-
-const StyledWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  .card {
-    width: 500px;
-    height: 140px;
-    background: transparent;
-    border-radius: 10px;
-    border: 1px solid #9F7AEA;
-    box-shadow: 0 0 10px 3px rgba(159, 122, 234, 0.6);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-  }
-
-  header {
-    display: flex;
-    justify-content: center;
-    color: #BDBFB7;
-    font-size: 18px;
-  }
-
-  .active {
-    color: #2CAD3D;
-  }
-
-  .premium-plan {
-    width: 100%;
-    text-align: center;
-    background: gold;
-    color: black;
-    padding: 10px 0;
-    font-weight: bold;
-    border-radius: 5px;
-    margin: 10px 0;
-  }
-
-  main {
-    display: flex;
-    justify-content: center;
-    color: white;
-    font-weight: 600;
-    font-size: 16px;
-  }
-`;
+  return (
+    <>
+      <div className="absolute top-[6rem] py-[2rem] px-[14rem]  flex flex-col w-full  left-[9rem]  ">
+        <div className="flex flex-row items-center justify-start space-x-[2rem] mb-[2rem] left-[25rem] ">
+          <h6 className="h6  text-n-10">Subscription Pack:</h6>
+          <h4 className="h4  text-n-1"> Web Premium</h4>
+        </div>
+        <InputFolder />
+      </div>
+    </>
+  );
+};
 
 export default UserSubscription;

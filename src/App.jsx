@@ -5,16 +5,14 @@ import MainContainer from "./components/MainContainer";
 import "./App.css";
 
 const App = () => {
-    const [tokens, setTokens] = useState(10); // Start with 10 tokens
+  const [tokens, setTokens] = useState(10); // Start with 10 tokens
 
-    return (
-        <div class="body">
-            <Sidebar />
-            <RemainingTokensCard tokens={tokens} /> {/* Display remaining tokens */}
-            <MainContainer tokens={tokens} setTokens={setTokens} /> {/* Pass tokens and setTokens */}
-        </div>
-    );
-
+  return (
+    <div class="body">
+      <Sidebar />
+      <RemainingTokensCard tokens={tokens} />
+      <MainContainer tokens={tokens} setTokens={setTokens} />
+    </div>
+  );
 };
 export default App;
-

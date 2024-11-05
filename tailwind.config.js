@@ -11,10 +11,19 @@ export default {
 
   theme: {
     extend: {
-      backgroundImage: {
-        "custom-gradient": "linear-gradient(to top, #7028e4 0%, #e5b2ca 100%)",
-      },
       keyframes: {
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        fadeOut: {
+          "0%": { opacity: "1" },
+          "100%": { opacity: "0" },
+        },
+        scaleIn: {
+          "0%": { transform: "scale(0.95)" },
+          "100%": { transform: "scale(1)" },
+        },
         anim: {
           "0%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-20px)" },
@@ -23,7 +32,11 @@ export default {
       },
       animation: {
         anim: "anim 3s infinite",
+        fadeIn: "fadeIn 0.3s ease-in-out",
+        fadeOut: "fadeOut 0.3s ease-in-out",
+        scaleIn: "scaleIn 0.3s ease-in-out",
       },
+
       colors: {
         color: {
           1: "#AC6AFF",
@@ -70,6 +83,8 @@ export default {
       },
       transitionDuration: {
         DEFAULT: "200ms",
+        300: "300ms",
+        500: "500ms",
       },
       transitionTimingFunction: {
         DEFAULT: "linear",
