@@ -1,4 +1,3 @@
-import Navbar from "./components/Navbar";
 import "./App.css";
 import Sidebar from "./components/Sidebar";
 import RemainingTokensCard from "./components/RemainingTokensCard";
@@ -8,7 +7,6 @@ const App = () => {
     <>
       <div class="body">
         <Sidebar />
-
         <RemainingTokensCard />
         <MainContainer />
       </div>
