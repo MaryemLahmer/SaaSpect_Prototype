@@ -1,6 +1,6 @@
 import React from "react";
 import amongUs from "../assets/amongUs.svg";
-
+import { Link } from "react-router-dom";
 import {
   GrUpdate,
   GrCart,
@@ -26,20 +26,19 @@ const SidebarContent = () => {
         </a>
       </div>
       <div className="flex flex-col gap-[1.5rem] mt-[2rem]  ">
-        <SidebarItem icon={<GrDashboard />} label="Overview" />
-        <SidebarItem icon={<GrContactInfo />} label="Profile" />
-        <SidebarItem icon={<GrUpdate />} label="Update" />
-        <SidebarItem icon={<GrCart />} label="Pricing" />
-        <SidebarItem icon={<GrConfigure />} label="Settings" />
+        <SidebarItem icon={<GrDashboard />} label="Overview" to="/overview" />
+        <SidebarItem icon={<GrContactInfo />} label="Profile" to="/Scan" />
+        <SidebarItem icon={<GrUpdate />} label="Update" to="/update" />
+        <SidebarItem icon={<GrConfigure />} label="Settings" to="/settings" />
       </div>
     </div>
   );
 };
 
-const SidebarItem = ({ icon, label }) => (
-  <div
+const SidebarItem = ({ icon, label, to }) => (
+  <Link
+    to={to}
     className="flex items-center gap-4 p-2 text-white hover:bg-violet-600 rounded-md transition-all duration-300 group"
-    style={{ position: "relative" }}
   >
     {icon}
     <span>{label}</span>
@@ -47,7 +46,7 @@ const SidebarItem = ({ icon, label }) => (
     <div className="group-hover:block hidden absolute left-full top-1/2 transform -translate-y-1/2">
       <div className="w-[8px] h-[8px] bg-red-500 rotate-45 origin-center"></div>
     </div>
-  </div>
+  </Link>
 );
 
 export default Sidebar;

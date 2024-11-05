@@ -38,7 +38,7 @@ export const services = [
   },
   {
     id: "2",
-    title: "API Security Testing2",
+    title: "API Security Testing",
     text: "Scanning and testing of API endpoints for security flaws.",
     backgroundUrl: "./src/assets/benefits/card-3.svg",
     imageUrl: benefitImage2,

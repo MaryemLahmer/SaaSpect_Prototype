@@ -1,6 +1,5 @@
 import React from "react";
 import { services } from "../constants";
-import { BackgroundCircles } from "./design/Hero";
 
 const ServiceCard = () => {
   return (
