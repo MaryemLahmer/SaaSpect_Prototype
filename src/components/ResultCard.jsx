@@ -30,6 +30,7 @@ const ResultCard = ({ severity, mainTitle, subtitle, details, recommendation }) 
         </CardWrapper>
     );
 }
+
 const CardWrapper = styled.div`
   .cardm {
     display: flex;
@@ -101,9 +102,10 @@ const CardWrapper = styled.div`
 
   .descriptiontext {
     position: relative;
-    left: -1.45em;
+    left: 0.3em;
     top: 0.2em;
     font-size: 0.75em;
+    padding-right: 4em;
   }
 
   .recommendationtext {

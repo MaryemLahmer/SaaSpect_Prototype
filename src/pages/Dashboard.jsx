@@ -9,7 +9,7 @@ const Dashboard = () => {
                     severity="high"
                     mainTitle="Pentesting"
                     subtitle="1 critical vulnerability detected"
-                    details="The login form is vulnerable to SQL injection."
+                    details="The login form used in Login.jsx is vulnerable to SQL injection."
                     recommendation="Use parameterized queries to mitigate SQL injection."
                 />
                 <ResultCard
@@ -23,7 +23,7 @@ const Dashboard = () => {
                     severity="low"
                     mainTitle="Configuration Check"
                     subtitle="No major vulnerabilities"
-                    details="Minor misconfiguration found in headers."
+                    details="Misconfiguration found in headers."
                     recommendation="Consider adding security headers like Content-Security-Policy."
                 />
             </div>
