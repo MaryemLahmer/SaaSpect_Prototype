@@ -22,8 +22,13 @@ const ResultCard = ({ severity, mainTitle, subtitle, details, recommendation }) 
                                 <b>Recommendation: </b> <br />{recommendation}</div>
                         </div>
                         <div className="card3">
-                            {severity === 'high' ? 'High Risk' : severity === 'medium' ? 'Medium Risk' : 'Low Risk'}
+                            {severity === 'high' ? 'High Risk' :
+                            severity === 'medium' ? 'Medium Risk' :
+                            severity === 'low' ? 'Low Risk' :
+                            severity === 'inexistant' ? 'No Risk' :
+                            ''}
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -142,9 +147,10 @@ const CardWrapper = styled.div`
     border-bottom-left-radius: 35px;
     border-bottom-right-radius: 35px;
     background: ${({ severity }) =>
-            severity === 'high' ? 'red' :
-                    severity === 'medium' ? 'orange' :
-                            'yellow'};
+    severity === 'high' ? 'red' :
+    severity === 'medium' ? 'orange' :
+    severity === 'low' ? 'yellow' :
+    severity === 'inexistant' ? 'green' : 'gray'};
     transition: .4s ease-in-out;
   }
 `;
