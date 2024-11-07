@@ -188,7 +188,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     color: black;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: bold;
     z-index: 2;
 }

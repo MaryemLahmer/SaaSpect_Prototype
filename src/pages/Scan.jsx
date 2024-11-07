@@ -151,7 +151,7 @@ const Scan = () => {
                     <div
                       className={
                         index === currentIndex
-                          ? "circle active animate-fadeIn"
+                          ? "circle active animate-scaleIn"
                           : ""
                       }
                     >
@@ -188,15 +188,12 @@ const Scan = () => {
         border-lg mt-[14rem] ml-[12rem] items-center justify-center 
         transition-opacity duration-1000 ease-in-out p-[0.5rem]"
       >
-        <h3
-          className="h3 text-n-1 mt-[1rem] transition-opacity 
-      duration-1000 ease-in-out text-center font-bold"
-        >
+        <h3 className="h3 text-n-1 mt-[1rem] transition-opacity animate-scaleIn duration-1000 ease-in-out text-center font-bold">
           {scanResults[currentIndex].title}
         </h3>
 
         <h5
-          className="h5 transition-opacity mt-[0.2rem] duration-1000 ease-in-out 
+          className="h5 transition-opacity animate-appear mt-[0.2rem] duration-1000 ease-in-out 
         font-code  text-n-2 text-center"
         >
           {scanResults[currentIndex].text}
