@@ -4,6 +4,7 @@ import Scan from "./pages/Scan";
 import Sidebar from "./components/Sidebar";
 import RemainingTokensCard from "./components/RemainingTokensCard";
 import MainContainer from "./components/MainContainer";
+import Dashboard from "./pages/Dashboard";
 import "./App.css";
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
             element={<MainContainer tokens={tokens} setTokens={setTokens} />}
           />
           <Route path="/scan" element={<Scan />} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </div>
     </div>
