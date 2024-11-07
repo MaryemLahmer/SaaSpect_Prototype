@@ -5,6 +5,7 @@ import Sidebar from "./components/Sidebar";
 import RemainingTokensCard from "./components/RemainingTokensCard";
 import MainContainer from "./components/MainContainer";
 import Dashboard from "./pages/Dashboard";
+import Report from "./pages/Report";
 import "./App.css";
 
 const App = () => {
@@ -23,7 +24,7 @@ const App = () => {
           />
           <Route path="/scan" element={<Scan />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/report" element={<Dashboard />} />
+          <Route path="/report" element={<Report />} />
         </Routes>
       </div>
     </div>

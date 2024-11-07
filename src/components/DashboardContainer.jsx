@@ -20,7 +20,7 @@ const DashboardContainer = () => {
       <div className="bg-n-1 w-[0.2rem] h-full ml-[1rem]"></div>
 
       {/* Main Content Area */}
-      <div className=" w-[73%] h-full flex flex-wrap mt-8 gap-[4rem]  overflow-hidden ml-[3rem] ">
+      <div className=" w-[73%] h-full flex flex-wrap mt-8 gap-[4.8rem]  overflow-hidden ml-[3rem] ">
         {scanResults.map((result) => (
           <ResultCard
             key={result.id}

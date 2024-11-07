@@ -21,7 +21,7 @@ const PieChart = () => {
   };
 
   return (
-    <div className="pie-chart-container mb-[5rem]">
+    <div className="pie-chart-container mb-[6rem]">
       <h3
         className="text-2xl font-semibold  mb-[2rem] text-center"
         style={{ color: "#c62e2e" }}

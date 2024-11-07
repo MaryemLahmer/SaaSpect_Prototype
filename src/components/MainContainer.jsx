@@ -8,7 +8,7 @@ import ServiceCard from "./ServiceCard";
 const MainContainer = ({ tokens, setTokens }) => {
   return (
     <div className="bg-n-8 overflow-y-auto h-screen flex flex-col fixed top-0 left-[14rem] w-full">
-      <Welcome />
+      <Welcome text="Welcome to SaaSpect" />
       <ServiceCard />
       <UserSubscription />
       <div className="absolute right-[19rem] top-[15.5rem]">

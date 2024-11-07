@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
-const ScanButton = ({ setTokens, tokens, text, to }) => {
+const ScanButton = ({ setTokens, tokens, text, to, onClick }) => {
   const handleClick = () => {
     if (text === "Start Scan") {
-      setTokens(tokens - 1); // Decrease tokens by 1
+      setTokens(tokens - 1); // Deduct one token
+    }
+    if (onClick) {
+      onClick(); // Trigger the custom onClick if provided
     }
   };
   return (

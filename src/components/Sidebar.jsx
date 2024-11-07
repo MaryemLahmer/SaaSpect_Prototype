@@ -9,7 +9,7 @@ import {
   GrContactInfo,
   GrAnalytics,
 } from "react-icons/gr";
-
+import Report from "../pages/Report";
 const SidebarContent = () => {
   return (
     <div className="w-[14rem]  bg-n-8 h-screen p-5 pt-8 border-r border-n-4">

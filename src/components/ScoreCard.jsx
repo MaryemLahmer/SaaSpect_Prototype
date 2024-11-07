@@ -7,7 +7,7 @@ const ScoreCard = () => {
       <div className="score-card border-4">
         <div className="card-header">
           <div className="track-info">
-            <div className="track-details  text-center">
+            <div className="track-details  text-center animate-fadeIn">
               <h2 className="text-center h2">
                 Your web app needs
                 <span style={{ color: "#c62e2e" }} className="font-bold">

@@ -130,3 +130,34 @@ export const scanResults = [
     severity: "high",
   },
 ];
+
+export const reportContent = `
+Cybersecurity Scan Report
+Date: 08/11/2024
+Prepared for: [Client / Organization Name]
+Conducted by: [Your Cybersecurity Team]
+
+Executive Summary
+This report summarizes the findings from a comprehensive cybersecurity scan 
+conducted on various aspects of your system, including web applications, 
+API security, malware detection, and data privacy. 
+
+Scan Results Overview:
+- Full-Site Vulnerability Assessment (Severity: Medium)
+  SQL Injection in Login form. Recommendation: Use parameterized queries.
+
+- Advanced Malware Detection (Severity: High)
+  Malicious Script Injection detected. Recommendation: Input validation.
+
+- API Security Testing (Severity: High)
+  Public API key detected. Recommendation: Use environment variables.
+
+- Security Risk Assessment (Severity: Medium)
+  Insecure report storage. Recommendation: Access control & key management.
+
+- Data Privacy Scanning (Severity: High)
+  Critical personal data leak. Recommendation: Set Secure & HttpOnly flags.
+
+Conclusion:
+Immediate attention required for high-severity issues. Regular assessments recommended.
+`;
