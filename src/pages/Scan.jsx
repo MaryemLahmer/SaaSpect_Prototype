@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { BackgroundCircles } from "../components/design/Hero";
 import "../App.css";
 import check from "../assets/check.png";
 import arrow from "../assets/arrow.png";
 import Loader from "../components/Loader";
-import { scannedServices } from "../constants";
 import ScanButton from "../components/ScanButton";
 const scanResults = [
   {
@@ -109,6 +107,7 @@ const Scan = () => {
       return () => clearTimeout(timeout); // Clean up timeout
     }
   }, [isFinalStep]);
+
   return (
     <div className="bg-n-8 overflow-y-auto h-screen flex flex-col fixed top-0 left-[14rem] w-full">
       <div className="h-[4rem] ml-[11rem] ">
@@ -206,7 +205,7 @@ const Scan = () => {
         )}
         {isFinalStep && !isLoaderVisible && (
           <div className="w-[full] h-[4rem] mt-[1rem]">
-            <ScanButton text="Done" to="/Profile" />
+            <ScanButton text="Done" to="/dashboard" />
           </div>
         )}
 

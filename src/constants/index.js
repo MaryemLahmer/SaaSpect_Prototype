@@ -67,7 +67,7 @@ export const services = [
   },
 ];
 
-export const scannedServices = [
+export const scanResults = [
   {
     id: "0",
     title: "Full-Site Vulnerability Assessment",
@@ -77,6 +77,9 @@ export const scannedServices = [
       { id: "0-2", name: "Cross-Site Scripting (XSS)", severity: "Medium" },
       { id: "0-3", name: "Cross-Site Request Forgery (CSRF)", severity: "Low" },
     ],
+    severity: "medium",
+    details: "The login form used in Login.jsx is vulnerable to SQL injection.",
+    recommendation: "Use parameterized queries to mitigate SQL injection.",
   },
   {
     id: "1",
@@ -86,6 +89,9 @@ export const scannedServices = [
       { id: "1-1", name: "Phishing Page Detected", severity: "High" },
       { id: "1-2", name: "Malicious Script Injection", severity: "Critical" },
     ],
+    details: "Malicious Script Injection.",
+    recommendation: "Implement Input Validation and Sanitization",
+    severity: "high",
   },
   {
     id: "2",
@@ -95,6 +101,9 @@ export const scannedServices = [
       { id: "2-1", name: "Broken Authentication", severity: "High" },
       { id: "2-2", name: "Excessive Data Exposure", severity: "Medium" },
     ],
+    severity: "high",
+    details: "API key is exposed to the public.",
+    recommendation: "Use environment variables to secure confidential data.",
   },
   {
     id: "3",
@@ -103,7 +112,10 @@ export const scannedServices = [
     vulnerabilities: [
       { id: "3-1", name: "Insecure Storage of Reports", severity: "Medium" },
     ],
-    backgroundUrl: "./src/assets/benefits/card-4.svg",
+    details:
+      "Sensitive or confidential reports are stored in a way that might allow unauthorized access.",
+    recommendation: "Apply Access Control and Store Encryption Keys Securely",
+    severity: "medium",
   },
   {
     id: "4",
@@ -113,5 +125,8 @@ export const scannedServices = [
       { id: "4-1", name: "Personal Data Leak Detected", severity: "Critical" },
       { id: "4-2", name: "Weak Privacy Configurations", severity: "Medium" },
     ],
+    details: "Insecure cookie attributes detected in session management.",
+    recommendation: "Set cookies with Secure and HttpOnly flags.",
+    severity: "high",
   },
 ];

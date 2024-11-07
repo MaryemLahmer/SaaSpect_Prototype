@@ -1,40 +1,55 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-const ResultCard = ({ severity, mainTitle, subtitle, details, recommendation }) => {
-    return (
-        <CardWrapper severity={severity}>
-            <div className="cardm">
-                <div className="card">
-                    <div className="main">{mainTitle}</div>
-                    <div className="mainsub">{subtitle}</div>
-                </div>
-                <div className="card2">
-                    <div className="upper">
-                        <div className="description">
-                            <div className="descriptiontext"><b>Details: </b>
-                                <br />{details}</div>
-                        </div>
-                    </div>
-                    <div className="lower">
-                        <div className="recommendation">
-                            <div className="recommendationtext">
-                                <b>Recommendation: </b> <br />{recommendation}</div>
-                        </div>
-                        <div className="card3">
-                            {severity === 'high' ? 'High Risk' :
-                            severity === 'medium' ? 'Medium Risk' :
-                            severity === 'low' ? 'Low Risk' :
-                            severity === 'inexistant' ? 'No Risk' :
-                            ''}
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </CardWrapper>
-    );
+function getSeverityColor(severity) {
+  switch (severity) {
+    case "critical":
+      return "bg-red-500 hover:bg-red-400";
+    case "high":
+      return "bg-orange-500 hover:bg-red-500";
+    case "medium":
+      return "bg-yellow-500 hover:bg-yellow-500";
+    case "low":
+      return "bg-green-500 hover:bg-green-600";
+    case "inexistant":
+    default:
+      return "bg-gray-300 hover:bg-gray-400";
+  }
 }
+
+const ResultCard = ({
+  severity,
+  mainTitle,
+  subtitle,
+  details,
+  recommendation,
+}) => {
+  return (
+    <CardWrapper severity={severity}>
+      <div className="cardm ">
+        <div
+          className={`card bg-white hover:bg-${getSeverityColor(
+            severity
+          )} transition duration-300`}
+        >
+          <h5 className="main h5 text-center">{mainTitle}</h5>
+        </div>
+        <div className="card2 text-center bg-n-1">
+          <div className="upper">
+            <div className="description">
+              <div className="descriptiontext">{details}</div>
+            </div>
+          </div>
+          <div className="lower">
+            <div className="recommendation">
+              <div className="recommendationtext">{recommendation}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </CardWrapper>
+  );
+};
 
 const CardWrapper = styled.div`
   .cardm {
@@ -44,21 +59,19 @@ const CardWrapper = styled.div`
   }
 
   .card {
-    position: relative;
-    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
     height: 130px;
-    border-radius: 25px;
-    background: whitesmoke;
+    border-radius: 35px;
     color: black;
     z-index: 2;
-    transition: .4s ease-in-out;
+    transition: 0.4s ease-in-out;
   }
 
   .main {
-    font-size: 1.5em;
     position: relative;
-    top: 0.6em;
-    left: 0.5em;
   }
 
   .mainsub {
@@ -72,23 +85,23 @@ const CardWrapper = styled.div`
     position: absolute;
     display: flex;
     flex-direction: row;
-    width: 280px;
+    width: 300px;
     height: 130px;
     border-radius: 35px;
-    background: white;
     z-index: -1;
-    transition: .4s ease-in-out;
+    transition: 0.4s ease-in-out;
   }
 
   .card:hover {
-    background-color: #FFE87C;
     cursor: pointer;
+    z-index: 2;
   }
 
   .card:hover + .card2 {
-    height: 300px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
+    height: 280px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    z-index: 1;
   }
 
   .card:hover + .card2 .lower {
@@ -107,17 +120,16 @@ const CardWrapper = styled.div`
 
   .descriptiontext {
     position: relative;
-    left: 0.3em;
-    top: 0.2em;
-    font-size: 0.75em;
-    padding-right: 4em;
+    font-size: 1rem;
+    padding-left: 0rem;
+    padding-right: 2.5rem;
   }
 
   .recommendationtext {
     position: relative;
     left: -1.5em;
     top: -0.8em;
-    font-size: 1.15em;
+    font-size: 1rem;
   }
 
   .lower {
@@ -130,7 +142,7 @@ const CardWrapper = styled.div`
     top: 1em;
     margin-top: 0.7em;
     font-size: 0.7em;
-    transition: .4s ease-in-out;
+    transition: 0.4s ease-in-out;
   }
 
   .card3 {
@@ -139,19 +151,24 @@ const CardWrapper = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 280px;
-    height: 30px;
+    width: 300px;
+    height: 20px;
     top: 4.7em;
     left: -2.4em;
     font-size: 1.24em;
     border-bottom-left-radius: 35px;
     border-bottom-right-radius: 35px;
     background: ${({ severity }) =>
-    severity === 'high' ? 'red' :
-    severity === 'medium' ? 'orange' :
-    severity === 'low' ? 'yellow' :
-    severity === 'inexistant' ? 'green' : 'gray'};
-    transition: .4s ease-in-out;
+      severity === "high"
+        ? "red"
+        : severity === "medium"
+        ? "orange"
+        : severity === "low"
+        ? "yellow"
+        : severity === "inexistant"
+        ? "green"
+        : "gray"};
+    transition: 0.4s ease-in-out;
   }
 `;
 

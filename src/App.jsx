@@ -23,6 +23,7 @@ const App = () => {
           />
           <Route path="/scan" element={<Scan />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/report" element={<Dashboard />} />
         </Routes>
       </div>
     </div>

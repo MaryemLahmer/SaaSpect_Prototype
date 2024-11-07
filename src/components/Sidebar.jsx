@@ -21,9 +21,7 @@ const SidebarContent = () => {
       <div className="flex flex-col gap-[1.5rem] mt-[2rem]  ">
         <SidebarItem icon={<GrDashboard />} label="Overview" to="/overview" />
         <SidebarItem icon={<GrAnalytics />} label="Dashboard" to="/dashboard" />
-        <SidebarItem icon={<GrContactInfo />} label="Profile" to="/Profile" />
-        <SidebarItem icon={<GrUpdate />} label="Update" to="/update" />
-        <SidebarItem icon={<GrConfigure />} label="Settings" to="/settings" />
+        <SidebarItem icon={<GrContactInfo />} label="Reports" to="/report" />
       </div>
     </div>
   );
