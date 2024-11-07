@@ -13,8 +13,8 @@ export default {
     extend: {
       keyframes: {
         fadeIn: {
-          "0%": { opacity: "0" },
-          "100%": { opacity: "1" },
+          "0%": { opacity: 0 },
+          "100%": { opacity: 1 },
         },
         fadeOut: {
           "0%": { opacity: "1" },
@@ -29,12 +29,29 @@ export default {
           "50%": { transform: "translateY(-20px)" },
           "100%": { transform: "translateY(0)" },
         },
+        appear: {
+          "0%": {
+            opacity: "0",
+          },
+          "100%": {
+            opacity: "1",
+          },
+        },
       },
       animation: {
         anim: "anim 3s infinite",
-        fadeIn: "fadeIn 0.3s ease-in-out",
+        fadeIn: "fadeIn 1s ease-in-out forwards",
         fadeOut: "fadeOut 0.3s ease-in-out",
         scaleIn: "scaleIn 0.3s ease-in-out",
+        appear: "appear 1.5s ease-in-out",
+      },
+      animationDelay: {
+        100: "100ms",
+        500: "500ms",
+        1000: "1000ms",
+        2000: "2000ms",
+        3000: "3000ms",
+        // Add more delays as needed
       },
 
       colors: {

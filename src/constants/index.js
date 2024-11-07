@@ -66,3 +66,52 @@ export const services = [
     imageUrl: benefitImage2,
   },
 ];
+
+export const scannedServices = [
+  {
+    id: "0",
+    title: "Full-Site Vulnerability Assessment",
+    text: "Detection of common vulnerabilities",
+    vulnerabilities: [
+      { id: "0-1", name: "SQL Injection", severity: "High" },
+      { id: "0-2", name: "Cross-Site Scripting (XSS)", severity: "Medium" },
+      { id: "0-3", name: "Cross-Site Request Forgery (CSRF)", severity: "Low" },
+    ],
+  },
+  {
+    id: "1",
+    title: "Advanced Malware Detection",
+    text: "Malware scanning to identify malicious scripts, phishing pages, or compromised assets.",
+    vulnerabilities: [
+      { id: "1-1", name: "Phishing Page Detected", severity: "High" },
+      { id: "1-2", name: "Malicious Script Injection", severity: "Critical" },
+    ],
+  },
+  {
+    id: "2",
+    title: "API Security Testing",
+    text: "Scanning and testing of API endpoints for security flaws.",
+    vulnerabilities: [
+      { id: "2-1", name: "Broken Authentication", severity: "High" },
+      { id: "2-2", name: "Excessive Data Exposure", severity: "Medium" },
+    ],
+  },
+  {
+    id: "3",
+    title: "Security Risk Assessment and Reporting",
+    text: "Executive summary reports tailored for non-technical stakeholders.",
+    vulnerabilities: [
+      { id: "3-1", name: "Insecure Storage of Reports", severity: "Medium" },
+    ],
+    backgroundUrl: "./src/assets/benefits/card-4.svg",
+  },
+  {
+    id: "4",
+    title: "Data Privacy and Compliance Scanning",
+    text: "Identification of personal data leaks or misconfigured assets that may compromise privacy.",
+    vulnerabilities: [
+      { id: "4-1", name: "Personal Data Leak Detected", severity: "Critical" },
+      { id: "4-2", name: "Weak Privacy Configurations", severity: "Medium" },
+    ],
+  },
+];

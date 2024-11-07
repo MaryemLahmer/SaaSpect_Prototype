@@ -11,9 +11,13 @@ const MainContainer = ({ tokens, setTokens }) => {
       <Welcome />
       <ServiceCard />
       <UserSubscription />
-
-      <div className=" mt-[5rem] left-[42rem]">
-        <ScanButton tokens={tokens} setTokens={setTokens} />
+      <div className="absolute right-[19rem] top-[15.5rem]">
+        <ScanButton
+          tokens={tokens}
+          setTokens={setTokens}
+          text="Start Scan"
+          to="/Scan"
+        />
       </div>
     </div>
   );
